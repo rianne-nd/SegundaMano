@@ -1,0 +1,18 @@
+using SegundaMano.Models.Tables;
+using System;
+using System.Collections.Generic;
+using System.Data.Entity.ModelConfiguration;
+using System.Linq;
+using System.Web;
+
+namespace SegundaMano.Models.Maps
+{
+    public class TblPaymentMethodsMap : EntityTypeConfiguration<TblPaymentMethodsModel>
+    {
+        public TblPaymentMethodsMap()
+        {
+            HasKey(i => i.paymentMethodID);
+            ToTable("tblPaymentMethods");
+        }
+    }
+}
